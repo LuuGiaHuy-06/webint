@@ -1,0 +1,95 @@
+.four-ans {
+    margin: auto;
+    width: 20%;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+.ques {
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 30px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+  }
+
+.button-style1 {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+}
+
+.button-style {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    width: 25%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+
+    padding: 2% 2%;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: black;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+}
+.button-style:hover {
+    background-color: #AAA;
+}
+
+.form-class {
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+.win-result {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background-color: green;
+    color: white;
+    padding: 2% 2%;
+    text-align: center;
+    border: none;
+    border-radius: 5px; 
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  }
+
+.lose-result {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    background-color: red;
+    color: white;
+    padding: 2% 2%;
+    text-align: center;
+    border: none;
+    border-radius: 5px; 
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+#third{
+    background: url("mcq\\itachi.jpg") 50% 0 no-repeat fixed;
+    color: white;
+    height: 650px;
+    padding: 100px 0 0 0;   
+    }

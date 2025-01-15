@@ -1,0 +1,14 @@
+in the future:
+[ok] more smooth, fast
+edit css
+link to my website
+has everyone accessed
+[ok] has while-loop for finding 3 similar answers
+delay button + change question
+
+database collect relative topics for fast queries
+contain jlpt level 
+
+advance:
+sentence breakdown
+lyrics/anime integrated

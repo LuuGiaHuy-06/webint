@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="jp">
+    <head>
+        <title>日本語のテスト</title>
+        <link href="{% static 'mcq/styles.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Source: {{ random_page }}</h1>
+        {% if result %}
+            <h1>{{ result }}</h1> 
+        {% endif %}
+        <div class = "ques">
+            問題: {{ sen_sen }}
+        </div>
+
+        <form class="form-class">
+            {% csrf_token %}
+            {% for si in simi %}
+            <div class="four-ans">
+                <input type="checkbox" name="answer" value="{{ si }}" id="answer-{{ forloop.counter }}"> 
+                <label for="answer-{{ forloop.counter }}">{{ si }}</label><br>
+             </div>
+            {% endfor %}
+            <button class="button-style" id="check-answer">
+                答えをチェック
+            </button>
+        </form>
+
+        <div id="Correct" style="display: none; color: white;" class="win-result">〇 正しい</div>
+        <div id="Incorrect" style="display: none; color: white;" class="lose-result">✖ 違い</div>
+
+        <footer>
+            <p>
+              If you do not see the answer, please refresh the page or click the submit button.
+            </p>
+          </footer>
+    </body>
+
+    <script>
+        document.getElementById('check-answer').addEventListener('click', function () {
+            // Correct answer from template variable
+            const correctAnswer = "{{ target_word }}";
+            
+            // Get all checkboxes
+            const checkboxes = document.querySelectorAll('input[name="answer"]');
+            
+            // Check if any selected value matches the correct answer
+            let isCorrect = false;
+            checkboxes.forEach((checkbox) => {
+                if (checkbox.checked && checkbox.value === correctAnswer) {
+                    isCorrect = true;
+                }
+            });
+
+            // Show result based on correctness
+            if (isCorrect) {
+                document.getElementById('Correct').style.display = 'block';
+                document.getElementById('Incorrect').style.display = 'none';
+            } else {
+                document.getElementById('Correct').style.display = 'none';
+                document.getElementById('Incorrect').style.display = 'block';
+            }
+        });
+    </script>
+
+</html>
