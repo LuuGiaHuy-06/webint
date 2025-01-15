@@ -139,7 +139,7 @@ def mcq_fast(request):
     topic_names = ['日本', '東京', '東京大学', '日本の経済', 'ベトナム', '進撃の巨人', 'アメリカ合衆国']
     length = len(topic_names) -1
     random_topic = topic_names[random.randint(0, length)]
-    with open(f"mcq\\data\\{random_topic}.json", "r", encoding="utf-8") as file:
+    with open(f"mcq/data/{random_topic}.json", "r", encoding="utf-8") as file:
         data = json.load(file)
         length = len(data)
         target_array = data[random.randint(0, length-1)][0]
