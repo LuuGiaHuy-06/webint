@@ -1,4 +1,4 @@
-Django==5.1.4
+Django==4.2.19
 jsonschema==4.23.0
 jsonschema-specifications==2024.10.1
 gunicorn==23.0.0
