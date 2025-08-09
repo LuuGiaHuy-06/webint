@@ -1,12 +1,12 @@
 .four-ans {
     margin: auto;
     width: 20%;
-    font-family: sans-serif;
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, "MS Gothic", "Noto Sans JP", sans-serif;
     font-size: 30px;
 }
 
 .ques {
-    font-family: sans-serif;
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, "MS Gothic", "Noto Sans JP", sans-serif;
     text-align: center;
     font-size: 30px;
 }
